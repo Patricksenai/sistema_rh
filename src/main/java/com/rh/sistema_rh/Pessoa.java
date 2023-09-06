@@ -8,6 +8,17 @@ public abstract class Pessoa {
     String cpf;
     int dataNascimento;
     String ctps;
+    
+
+
+    public Pessoa(int id, String nome, String cpf, int dataNascimento, String ctps) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+        this.ctps = ctps;
+
+    }
 
 
 }
