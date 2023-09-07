@@ -3,38 +3,51 @@ package com.rh.sistema_rh;
 import com.rh.sistema_rh.enums.Salario;
 
 public class Gerente extends Funcionario {
+  
 
-    Salario salario = Salario.Gerentesa;
-
-
-    Salario Gerentesa;
     
-    public Gerente( String nome, String cpf, int dataNascimento, String ctps) {
-        super( nome, cpf, dataNascimento, ctps);
+    public Gerente( String nome, String cpf, String dataNascimento, String ctps) {
+        super( nome, cpf, dataNascimento, ctps, Salario.GERENTE);
     }
 
     @Override
-    public double fgts(double salario) {
-        return salario * 0.08;
+    public double csalario() {
+        return getTipo().getSalarioBase();
+        
+    } 
+    @Override
+    public double tfgts() {
+        return csalario() * 0.08;
+        
+    }
+
+    @Override
+    public double tinss() {
+        return csalario() * 0.11;
        
-      
     }
 
     @Override
-    public double inss(double salario) {
-        return salario * 0.01;
+    public double tdecimo() {
+        return csalario()/12;
+        
     }
 
     @Override
-    public double decimo(double salario) {
-        return salario / 12;
-    
+    public double tférias() {
+        return csalario() * 0.1;
+        
     }
-
     @Override
-    public double férias(double salario) {
-        return salario * 0.08;
-   
-    }
+    public void imprimirDados() {
+        System.out.println("Nome: " + getNome());
+        System.out.println("Idade: " + getDataNascimento());
+        System.out.println("Tipo: " + getTipo());
+        System.out.println("Salário: " + csalario());
+        System.out.println("FGTS: " + tfgts());
+        System.out.println("Férias: " + tférias());
+        System.out.println("INSS: " + tinss());
+        System.out.println("Décimo Terceiro: " + tdecimo());  
+}
     
 }

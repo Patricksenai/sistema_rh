@@ -1,16 +1,16 @@
 package com.rh.sistema_rh.enums;
 
 public enum Salario {
-    Supervisorsa(2.000),Gerentesa(4.000),Atendentesa(1.500);
+    SUPERVISOR(2000.0),GERENTE(4000.0),ATENDENTE(1000.0);
 
-    private double valor;
+    private double salarioBase;
 
-    Salario (double valor){
-        this.valor = valor;
+    Salario (double salarioBase){
+        this.salarioBase = salarioBase;
     }
 
-    public double getValor (){
-        return valor;
+    public double getSalarioBase (){
+        return salarioBase;
     }
 
 
