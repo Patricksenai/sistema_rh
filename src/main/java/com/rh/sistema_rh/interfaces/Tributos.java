@@ -1,10 +1,10 @@
 package com.rh.sistema_rh.interfaces;
 
 public interface Tributos {
-    void fgts(double salario);
-    void inss(double salario);
-    void decimo(double salario);
-    void férias(double salario);
+    double fgts(double salario);
+    double inss(double salario);
+    double decimo(double salario);
+    double férias(double salario);
 
 
     

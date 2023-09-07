@@ -6,7 +6,7 @@ public abstract class Pessoa {
     private int dataNascimento;
     private String ctps;
 
-    public Pessoa(int id, String nome, String cpf, int dataNascimento, String ctps) {
+    public Pessoa( String nome, String cpf, int dataNascimento,String ctps) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;

@@ -1,13 +1,19 @@
 package com.rh.sistema_rh;
 
+import com.rh.sistema_rh.interfaces.Tributos;
 
+public abstract class Funcionario extends Pessoa implements Tributos {
 
-public class Funcionario extends Pessoa {
-
-    
-
-    public Funcionario(int id, String nome, String cpf, int dataNascimento, String ctps) {
-        super(id, nome, cpf, dataNascimento, ctps);
+    public Funcionario(String nome, String cpf, int dataNascimento, String ctps) {
+        super(nome, cpf, dataNascimento, ctps);
+      
     }
+
     
-}
+  
+    }
+
+   
+
+    
+
