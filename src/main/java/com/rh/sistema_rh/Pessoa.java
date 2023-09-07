@@ -1,24 +1,33 @@
 package com.rh.sistema_rh;
 
-
-
 public abstract class Pessoa {
-    int id;
-    String nome;
-    String cpf;
-    int dataNascimento;
-    String ctps;
-    
-
+    private String nome;
+    private String cpf;
+    private int dataNascimento;
+    private String ctps;
 
     public Pessoa(int id, String nome, String cpf, int dataNascimento, String ctps) {
-        this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.ctps = ctps;
-
+        
+    }
+    public String getNome() {
+        return nome;
     }
 
+    public String getCpf() {
+        return cpf;
+    }
 
+    public int getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public String getCtps() {
+        return ctps;
+    }
+
+    
 }
